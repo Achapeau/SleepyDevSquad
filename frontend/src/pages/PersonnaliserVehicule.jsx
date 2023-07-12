@@ -1,4 +1,4 @@
-function Page4() {
+function PersonnaliserVehicule() {
     return (
       <h1>
           Informations
@@ -6,5 +6,4 @@ function Page4() {
     );
   }
   
-  export default Page4;
-  
+  export default PersonnaliserVehicule;

@@ -11,7 +11,6 @@ function NavBar() {
         <li>
           <Link to="/" onClick={handleShowLinks}>
             <img
-              className={styles["img-logo-desk"]}
               src="../src/assets/Images/logo-sleepy-dev-squad.png"
               alt="Logo for desktop"
             />
