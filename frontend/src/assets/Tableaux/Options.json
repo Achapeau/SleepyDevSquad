@@ -1,0 +1,26 @@
+{
+    "eau": {
+        "image": "url",
+        "prix": "1 Ecu"
+    },
+    "cervoise": {
+        "image": "url",
+        "prix": "3 Ecu"
+    },
+    "vin": {
+        "image": "url",
+        "prix": "3 Ecu"
+    },
+    "cocher": {
+        "image": "url",
+        "prix": "6 Ecu"
+    },
+    "garde": {
+        "image": "url",
+        "prix": "8 Ecu"
+    },
+    "marchandise": {
+        "image": "url",
+        "prix": "5 Ecu"
+    }
+}
