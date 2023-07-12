@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 import Button from "../components/Button";
+import Map from "../components/Map";
 
 function Accueil() {
   return (
@@ -37,7 +38,7 @@ function Accueil() {
           <h2 className="font-sans text-brown text-xl mb-2">
             Querir ta destination
           </h2>
-          <div className="flex items-center flex-col md:flex-row">
+          <div className="flex items-center flex-col md:flex-row h-96">
             <div className="flex flex-col w-48 justify-center">
               <label htmlFor="departure" className="mt-2 text-brown">
                 Départ
@@ -64,18 +65,23 @@ function Accueil() {
                 <option value="">Ville 2</option>
               </select>
             </div>
-            <img
-              className="mb-4 max-w-sm md:ml-4"
-              src="../src/assets/Images/carte.jpg"
-              alt="carte"
-            />
+            <div className="h-80 " >
+              <Map />
+              {/* <img
+                className="mb-4 max-w-sm md:ml-4"
+                src="../src/assets/Images/carte.jpg"
+                alt="carte"
+              /> */}
+            </div>
           </div>
+          <div>
           <Link to="/choixvéhicule/">
             <Button
-              className="md:absolute bottom-32"
+              // className=" md:absolute md:bottom-32"
               btnName="Querir son char"
             />
           </Link>
+          </div>
         </div>
       </div>
     </main>
