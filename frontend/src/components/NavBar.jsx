@@ -1,52 +1,26 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function NavBar() {
-  const [showLinks, setShowLinks] = useState(false);
-  const handleShowLinks = () => setShowLinks(!showLinks);
-  // const handleCloseNavbar = () => setShowLinks(false);
   return (
-    <nav className="bg-gray-500 font-mono bg-blue">
+    <nav className="bg-blue font-mono h-28 w-full">
       <ul className="flex justify-between items-center">
-        <li>
-          <Link to="/" onClick={handleShowLinks}>
-            <img src="" alt="Logo for desktop" />
+        <li className="flex items-center">
+          <Link to="/">
+            <img
+              src="../src/assets/Images/logo-sleepy-dev-squad.png"
+              alt="Logo for desktop"
+              className="h-20 m-5"
+            />
           </Link>
         </li>
-        <div className="flex justify-between w-4/12 mr-12">
+        <div className="flex justify-center w-screen font-sans text-almostWhite">
           <li>
-            <Link to="/informations" onClick={handleShowLinks}>
-              <h1>Informations</h1>
-            </Link>
-          </li>
-          <li>
-            <Link to="/Page3" onClick={handleShowLinks}>
-              <h1>Page 3</h1>
-            </Link>
-          </li>
-          <li>
-            <Link to="/Page4" onClick={handleShowLinks}>
-              <h1>Page 4</h1>
-            </Link>
-          </li>
-          <li>
-            <Link to="/Page5" onClick={handleShowLinks}>
-              <h1>Page 5</h1>
-            </Link>
-          </li>
-          <li>
-            <Link to="/Page6" onClick={handleShowLinks}>
-              <h1>Page 6</h1>
-            </Link>
-          </li>
-          <li>
-            <Link to="/Page7" onClick={handleShowLinks}>
-              <h1>Page 7</h1>
+            <Link to="/">
+              <h1 className="md:text-6xl text-3xl">Tuum Vehiculum</h1>
             </Link>
           </li>
         </div>
       </ul>
-      <button type="button" onClick={handleShowLinks}></button>
     </nav>
   );
 }

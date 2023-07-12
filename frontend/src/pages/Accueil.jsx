@@ -1,3 +1,5 @@
+import Button from "../components/Button";
+
 function Accueil() {
   return (
     <main className="bg-white font-mono flex flex-grow">
