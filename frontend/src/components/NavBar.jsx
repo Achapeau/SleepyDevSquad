@@ -6,14 +6,11 @@ function NavBar() {
   const handleShowLinks = () => setShowLinks(!showLinks);
   // const handleCloseNavbar = () => setShowLinks(false);
   return (
-    <nav className="bg-gray-500 font-mono">
+    <nav className="bg-gray-500 font-mono bg-blue">
       <ul className="flex justify-between items-center">
         <li>
           <Link to="/" onClick={handleShowLinks}>
-            <img
-              src="../src/assets/Images/logo-sleepy-dev-squad.png"
-              alt="Logo for desktop"
-            />
+            <img src="" alt="Logo for desktop" />
           </Link>
         </li>
         <div className="flex justify-between w-4/12 mr-12">
