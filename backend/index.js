@@ -29,6 +29,19 @@ const createPoolInstance = () => {
 };
 const pool = createPoolInstance();
 
+app.get("/vehicules", async (req, res) => {
+  const sql = "SELECT * FROM vehicules;";
+
+  try {
+    const [vehicules] = await pool.query(sql);
+    res.send(vehicules);
+  } catch (err) {
+    console.error(err);
+    res.sendStatus(500);
+  }
+});
+
+
 app.listen(port, (err) => {
   if (err) {
     console.error("Something bad happened");
