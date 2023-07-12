@@ -8,6 +8,8 @@ export default {
       yellow: "#F2B705",
       brown: "#BFA27E",
       orange: "#F27405",
+      almostWhite: "#FEF4DC",
+      almostBlack: "#212120",
     },
     fontFamily: {
       sans: ["Grenze Gotisch", "sans-serif"],
