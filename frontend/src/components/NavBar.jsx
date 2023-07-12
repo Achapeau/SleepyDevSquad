@@ -7,7 +7,7 @@ function NavBar() {
         <li className="flex items-center">
           <Link to="/">
             <img
-              src="../src/assets/Images/logo-sleepy-dev-squad.png"
+              src="../src/assets/Images/logo-sds.png"
               alt="Logo for desktop"
               className="h-20 m-5"
             />
