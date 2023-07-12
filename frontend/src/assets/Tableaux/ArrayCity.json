@@ -1,0 +1,52 @@
+{
+    "Albi": {
+        "url": "../Images/blasons/Blason_Albi.png",
+        "x": "2.14",
+        "y": "43.92"        
+    },
+    "Arles": {
+        "url": "../Images/blasons/Blason_Arles.png",
+        "x": "4.62",
+        "y": "43.67"        
+    },
+    "Avignon": {
+        "url": "../Images/blasons/Blason_Avignon.png",
+        "x": "4.80",
+        "y": "43.94"        
+    },
+    "Carcassonne": {
+        "url": "../Images/blasons/Blason_Carcassonne.png",
+        "x": "2.34",
+        "y": "43.21"        
+    },
+    "Chateau de Carmélide": {
+        "url": "../Images/blasons/Blason_Carmélide.png",
+        "x": "-2.30",
+        "y": "47.39"        
+    },
+    "Dournazac, chateau de Montmirail": {
+        "url": "../Images/blasons/Blason_Dournazac.png",
+        "x": "0.91",
+        "y": "45.62"        
+    },
+    "Gordes": {
+        "url": "../Images/blasons/Blason_Gordes.png",
+        "x": "5.20",
+        "y": "43.91"        
+    },
+    "Hesdin": {
+        "url": "../Images/blasons/Blason_Hesdin.png",
+        "x": "2.03",
+        "y": "50.37" 
+    },
+    "Kaamelott": {
+        "url": "../Images/blasons/Blason-Kaamelott.png",
+        "x": "-3.06",
+        "y": "48.45"        
+    },
+    "Provins": {
+        "url": "../Images/blasons/Blason_Provins.png",
+        "x": "3.29",
+        "y": "48.55"        
+    }
+}
