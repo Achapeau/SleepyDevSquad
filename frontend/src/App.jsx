@@ -7,10 +7,10 @@ import "./index.css";
 function App() {
   return (
     <>
-    <div className="w-screen h-screen bg-almostWhite">
-      <NavBar />
-      <AppRoutes />
-      <Footer />
+      <div className="">
+        <NavBar />
+        <AppRoutes />
+        <Footer />
       </div>
     </>
   );
