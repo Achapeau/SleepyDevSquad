@@ -1,8 +1,10 @@
+import { useEffect, useState } from "react";
+
 function ChoixVehicule() {
   return (
-    <h1>
-        Informations
-    </h1>
+    <div>
+      <h1>Informations</h1>
+    </div>
   );
 }
 

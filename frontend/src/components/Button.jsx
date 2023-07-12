@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-function Button({ btnName }) {
+function Button({ btnName, onClick }) {
   return (
     <div>
       <button
@@ -8,6 +8,7 @@ function Button({ btnName }) {
         type="button"
       >
         {btnName}
+        {onClick}
       </button>
     </div>
   );
