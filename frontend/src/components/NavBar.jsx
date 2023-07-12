@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import styles from "../styles/NavBar.module.scss";
 
 function NavBar() {
   const [showLinks, setShowLinks] = useState(false);
@@ -12,7 +11,6 @@ function NavBar() {
         <li>
           <Link to="/" onClick={handleShowLinks}>
             <img
-              className={styles["img-logo-desk"]}
               src="../src/assets/Images/logo-sleepy-dev-squad.png"
               alt="Logo for desktop"
             />
