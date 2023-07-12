@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 
 import Button from "../components/Button";
 
+import cities from "../assets/Tableaux/ArrayCity.json";
+
 function Accueil() {
   return (
     <main className="bg-almostWhite font-mono flex flex-grow justify-center">
@@ -48,8 +50,11 @@ function Accueil() {
                 className="w-full p-1 rounded-md bg-blue drop-shadow-lg"
               >
                 <option value="">---</option>
-                <option value="">Ville 1</option>
-                <option value="">Ville 2</option>
+                {cities.map((city) => (
+                  <option key={city.id} value={city.id}>
+                    {city.name}
+                  </option>
+                ))}
               </select>
               <label htmlFor="arrival" className="mt-4 text-brown">
                 Arrivée
@@ -60,8 +65,11 @@ function Accueil() {
                 className="mb-8 w-full p-1 rounded-md bg-blue drop-shadow-lg"
               >
                 <option value="">---</option>
-                <option value="">Ville 1</option>
-                <option value="">Ville 2</option>
+                {cities.map((city) => (
+                  <option key={city.id} value={city.id}>
+                    {city.name}
+                  </option>
+                ))}
               </select>
             </div>
             <img
