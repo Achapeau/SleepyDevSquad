@@ -1,4 +1,4 @@
-function Informations() {
+function ChoixVehicule() {
   return (
     <h1>
         Informations
@@ -6,4 +6,4 @@ function Informations() {
   );
 }
 
-export default Informations;
+export default ChoixVehicule;
