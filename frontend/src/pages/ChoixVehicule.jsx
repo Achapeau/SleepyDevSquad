@@ -1,4 +1,3 @@
-import Proptypes from "prop-types";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -15,7 +14,7 @@ function ChoixVehicule() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/vehicules`)
+      .get(`http://localhost:8000/vehicules`)
       .then((response) => {
         setVehiclesData(response.data);
       })
@@ -25,8 +24,7 @@ function ChoixVehicule() {
   if (vehiclesData.length > 0) {
     console.log(vehiclesData);
   }
-
-  const km = 50;
+  const km = parseInt(localStorage.getItem("distance"), 10);
 
   const handleClickMoteur = (e) => {
     setMoteur(e.target.value);
@@ -158,8 +156,8 @@ function ChoixVehicule() {
 
           <select onChange={handleTri} className="bg-almostWhite text-blue pl-2 p-1 font-mono">
             <option value="tri">Trier les véhicules</option>
-            <option value="prixCroissant">Par prix décroissant</option>
-            <option value="prixDécroissant">Par prix croissant</option>
+            <option value="prixCroissant">Par prix croissant</option>
+            <option value="prixDécroissant">Par prix décroissant</option>
             <option value="duréeCroissante">Par durée croissante</option>
             <option value="duréeDécroissante">Par durée décroissante</option>
           </select>
@@ -176,15 +174,24 @@ function ChoixVehicule() {
               )
               .filter((elem) => roues === null || elem.roues === roues)
               .filter((elem) => confort === null || elem.confort === confort)
+              .sort((a, b) => tri === "prixCroissant" && a.prix - b.prix)
+              .sort((a, b) => tri === "prixDécroissant" && b.prix - a.prix)
+              .sort(
+                (a, b) => tri === "duréeCroissante" && b.vitesse - a.vitesse
+              )
+              .sort(
+                (a, b) => tri === "duréeDécroissante" && a.vitesse - b.vitesse
+              )
               .map((vehicle) => (
                 <Vehicule
-                key={vehicle.id}
-                image={vehicle.image}
-                name={vehicle.name}
-                prix={vehicle.prix * km}
-                temps={km / vehicle.vitesse}
-                description={vehicle.description}
-              />
+                  key={vehicle.id}
+                  image={vehicle.image}
+                  name={vehicle.name}
+                  prix={Math.round((vehicle.prix / 10) * km)}
+                  temps={km / vehicle.vitesse}
+                  id={vehicle.id}
+                  description={vehicle.description}
+                />
               ))}
         </div>
       </div>
