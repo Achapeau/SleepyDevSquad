@@ -33,12 +33,10 @@ function Accueil() {
   const calculDistance = () => {
     const point1 = turf.point([selectCity1.y, selectCity1.x]);
     const point2 = turf.point([selectCity2.y, selectCity2.x]);
-    const distance = (turf.distance(point1, point2)).toFixed(2);
+    const distance = turf.distance(point1, point2).toFixed(2);
     console.log(distance);
-    localStorage.setItem("distance", distance)
-
-  }
-  
+    localStorage.setItem("distance", distance);
+  };
 
   return (
     <main className="bg-almostWhite font-mono flex flex-grow justify-center min-w-full">
@@ -83,7 +81,9 @@ function Accueil() {
                 name="departure"
                 id="departure"
                 className="w-full p-1 rounded-md bg-blue drop-shadow-lg"
-                onChange={(e) => setSelectCity1(cities.find((el)=> el.id == e.target.value))}
+                onChange={(e) =>
+                  setSelectCity1(cities.find((el) => el.id == e.target.value))
+                }
               >
                 <option value="">---</option>
                 {cities.map((city) => (
@@ -99,7 +99,9 @@ function Accueil() {
                 name="arrival"
                 id="arrival"
                 className="mb-8 w-full p-1 rounded-md bg-blue drop-shadow-lg"
-                onChange={(e) => setSelectCity2(cities.find((el)=> el.id == e.target.value))}
+                onChange={(e) =>
+                  setSelectCity2(cities.find((el) => el.id == e.target.value))
+                }
               >
                 <option value="">---</option>
                 {cities.map((city) => (
@@ -114,15 +116,10 @@ function Accueil() {
              
             </div>
           </div>
-          <div
-            onClick={calculDistance}
-          >
-          <Link to="/choixvehicule/">
-            <Button
-            
-              btnName="Querir son char"
-            />
-          </Link>
+          <div onClick={calculDistance}>
+            <Link to="/choixvehicule/">
+              <Button btnName="Querir son char" />
+            </Link>
           </div>
           <div>
             <img src="../src/assets/Images/charette.png" alt="charette" className="Charette"/>
