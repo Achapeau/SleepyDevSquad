@@ -59,7 +59,7 @@ function ChoixVehicule() {
             <option value="durée Décroissante">Par durée décroissante</option>
           </select>
         </div>
-        <div class="flex flex-col md:flex-row md:w-5/6 md:p-8 overflow-hidden flex-wrap justify-center items-center">
+        <div className="flex flex-col md:flex-row md:w-5/6 md:p-8 overflow-hidden flex-wrap justify-center items-center">
           {vehiclesData.length > 0 &&
             vehiclesData.map((vehicle) => (
               <Vehicule
