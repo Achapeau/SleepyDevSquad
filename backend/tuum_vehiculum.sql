@@ -39,7 +39,7 @@ INSERT INTO
 VALUES (
         'Âne',
         '../src/assets/Images/ane.png',
-        'Un magnifique âne qui vous amènera à bon port, lentement mais sûrement.',
+        'Un magnifique âne qui vous amènera à bon port, lentement mais sûrement',
         1,
         8,
         'Âne',
@@ -69,7 +69,7 @@ VALUES (
     ), (
         'Calèche décapotable',
         '../src/assets/Images/caleche_décapotable.png',
-        'Idéale pour prendre le soleil, cette calèche vous amène où vous souhaitez rapidement et avec style',
+        'Idéale pour prendre le soleil, cette calèche vous amène où vous souhaitez, rapidement et avec style',
         17,
         15,
         'Cheval',
@@ -97,9 +97,9 @@ VALUES (
         1,
         1
     ), (
-        'Carrosse familiale',
+        'Carrosse familial',
         '../src/assets/Images/carrosse_familiale.png',
-        'Ce sublime carrosse vous amènera vous et votre famille où vous le souhaitez, tout en bénéficiant d''un dans un confort extrême',
+        "Ce sublime carrosse vous amènera vous et votre famille où vous le souhaitez, tout en bénéficiant d'un confort extrême",
         30,
         15,
         'Cheval',
@@ -144,7 +144,7 @@ VALUES (
     ), (
         'Char',
         '../src/assets/Images/char.png',
-        'L''époque des arènes vous manques? Vous prenez pour Ben-Hur? Utilisez nos chars (attention, les risques d''accidents ne sont pas prix en charge pour notre compagnie)',
+        "L'époque des arènes vous manque ? Vous vous prenez pour Ben-Hur ? Utilisez nos chars (attention, les risques d'accidents ne sont pas pris en charge par notre compagnie)",
         12,
         35,
         'Cheval',
@@ -219,7 +219,7 @@ VALUES (
     ), (
         'Chariot 4 roues',
         '../src/assets/Images/chariot_4roues.png',
-        'Vous rêvez de faire un déménagement façon "Petite maison dans la prairie"? Vous avez trouvé le véhicule idéal',
+        'Vous rêvez de faire un déménagement façon "Petite maison dans la prairie" ? Vous avez trouvé le véhicule idéal',
         7,
         5,
         'Cheval',
@@ -234,7 +234,7 @@ VALUES (
     ), (
         'Chariot décapotable',
         '../src/assets/Images/chariot_decapotable.png',
-        'Superbe chariot décapotable, permettant de faire des courtes distances en profitant du soleil.',
+        'Superbe chariot décapotable, permettant de faire de courtes distances en profitant du soleil',
         12,
         12,
         'Cheval',
@@ -249,7 +249,7 @@ VALUES (
     ), (
         'Cheval',
         '../src/assets/Images/cheval.png',
-        'Simple et efficace, le cheval est la solution à tout vos déplacement',
+        'Simple et efficace, le cheval est la solution à tous vos déplacements',
         3,
         30,
         'Cheval',
