@@ -9,7 +9,7 @@ function AppRoutes() {
   return (
     <Routes>
       <Route exact path="/" element={<Accueil />} />
-      <Route path="/choixvéhicule/" element={<ChoixVehicule />} />
+      <Route path="/choixvehicule/" element={<ChoixVehicule />} />
       <Route
         path="/personnaliservehicule/"
         element={<PersonnaliserVehicule />}
