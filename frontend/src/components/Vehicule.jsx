@@ -12,7 +12,12 @@ function Vehicule({ image, name, prix, temps, id, description }) {
 
   return (
     <div className="w-4/5 h-1/2 flex flex-col justify-between items-center text-blue font-mono my-10 md:w-1/3 md:px-4 lg:px-10  md:h-1/6 drop-shadow-xl">
-      <img src={image} value={id} className="h-2/5 hover:animate-waving-caross active:animate-waving-caross transition-transform object-contain" onClick={handleClick} />
+      <img
+        src={image}
+        value={id}
+        className="h-2/5 hover:animate-waving-caross active:animate-waving-caross transition-transform object-contain"
+        onClick={handleClick}
+      />
       <h1 className="text-2xl">{name}</h1>
       <p className="text-base lg:text-xl">Prix : {prix} Ecus</p>
       <p className="text-base lg:text-xl">
@@ -23,7 +28,7 @@ function Vehicule({ image, name, prix, temps, id, description }) {
         type="button"
       >
         Querir ce Char
-      </button> */}
+      </button>
       <Link to={`/personnaliserVehicule/${id}`}>
         <Button btnName="Querir ce char" />
       </Link>
