@@ -24,14 +24,14 @@ function ChoixVehicule() {
   const km = 50;
 
   return (
-    <>
+    <main className="bg-almostWhite">
       <img
-        class="w-full h-32 object-cover object-center"
+        className="w-full h-32 object-cover object-center"
         src="../src/assets/Images/fresque.jpg"
         alt="foule derrière un carrosse avec chevaux"
       />
-      <div class="flex flex-col md:flex-row">
-        <div class="w-1/6">
+      <div className="flex flex-col md:flex-row">
+        <div className="w-1/6">
           {/* <div class="flex">
         <div className="dropdown">
           <label tabIndex={0} className="btn m-1">
@@ -63,15 +63,18 @@ function ChoixVehicule() {
           {vehiclesData.length > 0 &&
             vehiclesData.map((vehicle) => (
               <Vehicule
+                key={vehicle.id}
+                id={vehicle.id}
                 image={vehicle.image}
                 name={vehicle.name}
                 prix={vehicle.prix * km}
                 temps={km / vehicle.vitesse}
+                description={vehicle.description}
               />
             ))}
         </div>
       </div>
-    </>
+    </main>
   );
 }
 

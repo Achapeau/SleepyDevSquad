@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <div>
-      <div className="bg-blue w-full h-20  flex justify-center items-center">
+      <div className="bg-blue w-full h-20 flex justify-center items-center">
         <p className="font-mono text-almostWhite">
           {" "}
           2023 © Created by Sleepy Dev Squad{" "}
