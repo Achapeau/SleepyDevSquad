@@ -10,22 +10,7 @@ import garde from "../assets/Images/options/Garde.png";
 import marchandise from "../assets/Images/options/Marchandises.png";
 
 function PersonnaliserVehicule() {
-  const dateTimer = new Date("July 15, 23 17:20:18");
-  const [cocher, setCochet] = useState(false);
-  const [gardes, setGardes] = useState(false);
-  const [marchandises, setMarchandises] = useState(false);
-  const [eau, setEau] = useState(false);
-  const [cervoise, setCervoise] = useState(false);
-  const [vin, setVin] = useState(false);
-
   const [vehiclesData, setVehiclesData] = useState([]);
-  const [price, setPrice] = useState(0);
-
-  const prixFinal = price + vehiclesData.prix;
-
-  const navigate = useNavigate();
-
-  const { id } = useParams();
 
   useEffect(() => {
     fetch("http://localhost:8000/vehicules")
@@ -43,30 +28,49 @@ function PersonnaliserVehicule() {
       .catch((err) => console.error(err));
   }, []);
 
+  const km = parseInt(localStorage.getItem("distance"), 10);
+  const prix = Math.round((vehiclesData.prix / 10) * km);
+
+  const dateTimer = new Date("July 15, 23 17:20:18");
+  const [cocher, setCochet] = useState(false);
+  const [gardes, setGardes] = useState(false);
+  const [marchandises, setMarchandises] = useState(false);
+  const [eau, setEau] = useState(false);
+  const [cervoise, setCervoise] = useState(false);
+  const [vin, setVin] = useState(false);
+
+  const [price, setPrice] = useState(0);
+
+  const prixFinal = price + prix;
+
+  const navigate = useNavigate();
+
+  const { id } = useParams();
+
   const handleCocher = () => {
     setCochet(!cocher);
     if (cocher !== true) {
-      setPrice(price + 3);
+      setPrice(price + 1 * km);
     } else {
-      setPrice(price - 3);
+      setPrice(price - 1 * km);
     }
   };
 
   const handleGardes = () => {
     setGardes(!gardes);
     if (gardes !== true) {
-      setPrice(price + 8);
+      setPrice(price + 3 * km);
     } else {
-      setPrice(price - 8);
+      setPrice(price - 3 * km);
     }
   };
 
   const handleMarchandises = () => {
     setMarchandises(!marchandises);
     if (marchandises !== true) {
-      setPrice(price + 5);
+      setPrice(price + 15);
     } else {
-      setPrice(price - 5);
+      setPrice(price - 15);
     }
   };
 
@@ -74,17 +78,17 @@ function PersonnaliserVehicule() {
     if (eau !== true) {
       setEau(!eau);
       if (eau !== true) {
-        setPrice(price + 1);
+        setPrice(price + 3);
       }
     } else if (cervoise !== true) {
       setCervoise(!cervoise);
       if (cervoise !== true) {
-        setPrice(price + 2);
+        setPrice(price + 5);
       }
     } else if (vin !== true) {
       setVin(!vin);
       if (vin !== true) {
-        setPrice(price + 3);
+        setPrice(price + 8);
       }
     }
   };
