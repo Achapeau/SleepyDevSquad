@@ -1,0 +1,16 @@
+#Charette {
+    animation-name: slideIn;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes slideIn {
+    0% {
+      transform: translate(-300px, 0px) ease-out;
+    }
+    50% {
+      transform: translate(200px, 0px);
+    }
+    100% {
+      transform: translate(1500px, 0px);
+    }
+  }

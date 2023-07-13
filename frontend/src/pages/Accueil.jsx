@@ -8,14 +8,16 @@ import { useState } from "react";
 
 import * as turf from "@turf/turf";
 
+import "../styles/Accueil.css";
+
 function Accueil() {
   const [selectCity1, setSelectCity1] = useState(
     {
     "id":1,
     "name":"Albi", 
     "url": "../src/assets/Images/blasons/Blason_Albi.png",
-    "x": 2.14,
-    "y": 43.92
+    "x": 0.14,
+    "y": 0.92
 }
 );
   const [selectCity2, setSelectCity2] = useState(
@@ -23,7 +25,7 @@ function Accueil() {
     "id":2,
     "name":"Arles",
     "url": "../src/assets/Images/blasons/Blason_Arles.png",
-    "x": 4.62,
+    "x": 0.62,
     "y": 43.67
 }
 );
@@ -39,8 +41,8 @@ function Accueil() {
   
 
   return (
-    <main className="bg-almostWhite font-mono flex flex-grow justify-center">
-      <div className="mt-4 max-w-4xl flex flex-col w-full h-150">
+    <main className="bg-almostWhite font-mono flex flex-grow justify-center min-w-full">
+      <div className="mt-4 max-w-4xl flex flex-col w-full">
         <h1 className="text-xl mb-6 ml-2 text-blue">Bienvenue Cousin Hub !</h1>
         <div className="flex mx-2 h-32 md:justify-center">
           <div className="text-xs text-blue max-w-md">
@@ -107,7 +109,7 @@ function Accueil() {
                 ))}
               </select>
             </div>
-            <div className="h-100" >
+            <div className="h-100 mb-16" >
               <Map city1={selectCity1}  city2={selectCity2} />
              
             </div>
@@ -121,6 +123,9 @@ function Accueil() {
               btnName="Querir son char"
             />
           </Link>
+          </div>
+          <div>
+            <img src="../src/assets/Images/charette.png" alt="charette" className="Charette"/>
           </div>
         </div>
       </div>
