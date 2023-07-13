@@ -30,7 +30,7 @@ export default {
     animation: {
       "waving-caross": "wave 2s linear infinite",
     },
-    extend: {},
+
     extend: {
       height: {
         100: "40vh",
