@@ -150,10 +150,13 @@ function ChoixVehicule() {
               )
               .map((vehicle) => (
                 <Vehicule
+                  key={vehicle.id}
                   image={vehicle.image}
                   name={vehicle.name}
                   prix={Math.round((vehicle.prix / 10) * km)}
                   temps={km / vehicle.vitesse}
+                  id={vehicle.id}
+                  description={vehicle.description}
                 />
               ))}
         </div>
