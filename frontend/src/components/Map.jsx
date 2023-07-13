@@ -39,7 +39,7 @@ function Map({ city1, city2}) {
     () => (
         <div className="h-full w-full">
       <MapContainer
-        className="h-full w-full rounded-2xl ml-4"
+        className="h-full w-full rounded-2xl md:ml-4"
         center={center}
         zoom={6}
         minZoom={5}

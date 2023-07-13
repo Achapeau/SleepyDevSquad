@@ -1,7 +1,7 @@
 import { useEffect, useState, useCallback } from "react";
 import Proptypes from "prop-types";
 
-const zoom = 13;
+const zoom = 6;
 
 function ResetMap({ map, center }) {
   const [position, setPosition] = useState(() => map.getCenter());

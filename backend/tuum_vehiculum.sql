@@ -97,9 +97,9 @@ VALUES (
         1,
         1
     ), (
-        'Carrosse familiale',
+        'Carrosse familial',
         '../src/assets/Images/carrosse_familiale.png',
-        'Ce sublime carrosse vous amènera vous et votre famille où vous le souhaitez, tout en bénéficiant d''un dans un confort extrême',
+        'Ce sublime carrosse vous amènera vous et votre famille où vous le souhaitez, tout en bénéficiant d''un confort extrême',
         30,
         15,
         'Cheval',

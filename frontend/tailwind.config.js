@@ -35,8 +35,10 @@ export default {
       height: {
         100: "40vh",
         150: "84vh",
+        200: "100vh"
       },
     },
   },
+
   plugins: [require("daisyui")],
 };
