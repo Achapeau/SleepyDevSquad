@@ -26,7 +26,7 @@ function Accueil() {
     "name":"Arles",
     "url": "../src/assets/Images/blasons/Blason_Arles.png",
     "x": 0.62,
-    "y": 43.67
+    "y": 0.67
 }
 );
 
