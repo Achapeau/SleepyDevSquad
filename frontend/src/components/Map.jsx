@@ -8,159 +8,72 @@ import MarkerClusterGroup from "react-leaflet-cluster";
 
 import ResetMap from "../components/ResetMap";
 
-function Map() {
-  const markerScene = [
-    {
-      geocode: [46.14159, -1.16914],
-      popUp: "Flying High",
-    },
-    {
-      geocode: [46.14332, -1.17148],
-      popUp: "Sonic Sphere",
-    },
-    {
-      geocode: [46.14295, -1.16654],
-      popUp: "Electronic Dawn",
-    },
-    {
-      geocode: [46.14052, -1.17105],
-      popUp: "Sunset Stage",
-    },
-  ];
-
-  const markerCamping = {
-    geocode: [46.13067, -1.14631],
-    popUp: "Zone de Camping",
+function Map({ city1, city2}) {
+  const markerCity1 = {
+      geocode: [city1.y, city1.x],
+      popUp: `${city1.name}`,
+  };
+  const markerCity2 = {
+    geocode: [city2.y, city2.x],
+    popUp: `${city2.name}`,
   };
 
-  const markerToilets = [
-    {
-      geocode: [46.14193, -1.17129],
-      popUp: "W.C.1",
-    },
-    {
-      geocode: [46.14192, -1.16769],
-      popUp: "W.C.2",
-    },
-  ];
 
-  const markerFood = [
-    {
-      geocode: [46.141, -1.16927],
-      popUp: "food-truc",
-    },
-    {
-      geocode: [46.1409, -1.16978],
-      popUp: "BeerCraft",
-    },
-  ];
 
-  const markerEntrance = [
-    {
-      geocode: [46.1408, -1.1686],
-      popUp: "Entrée du festival 1",
-    },
-    {
-      geocode: [46.14111, -1.16613],
-      popUp: "Entrée du festival 2",
-    },
-  ];
-
-  const concertIcon = new Icon({
-    iconUrl: "../src/assets/Images/concerts.png",
+  const city1Icon = new Icon({
+    iconUrl: city1.url,
     iconSize: [32, 32],
   });
 
-  const campingIcon = new Icon({
-    iconUrl: "../src/assets/Images/places.png",
+  const city2Icon = new Icon({
+    iconUrl: city2.url,
     iconSize: [32, 32],
   });
 
-  const toiletsIcon = new Icon({
-    iconUrl: "../src/assets/Images/wc.png",
-    iconSize: [32, 32],
-  });
-
-  const foodIcon = new Icon({
-    iconUrl: "../src/assets/Images/food.png",
-    iconSize: [32, 32],
-  });
-
-  const entranceIcon = new Icon({
-    iconUrl: "../src/assets/Images/tickets.png",
-    iconSize: [32, 32],
-  });
-
-  const center = [46.1406, -1.1606];
+  
+  const center = [46.2848, 1.7606];
 
   const [map, setMap] = useState(null);
-
+  
   const displayMap = useMemo(
     () => (
         <div className="h-full w-full">
       <MapContainer
         className="h-full w-full rounded-2xl ml-4"
         center={center}
-        zoom={14}
-        minZoom={7}
+        zoom={6}
+        minZoom={5}
         maxZoom={18}
         ref={setMap}
       >
         {/* OPEN STREET MAPS TILES */}
         <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          attribution='Tiles &copy; Esri &mdash; National Geographic, Esri, DeLorme, NAVTEQ, UNEP-WCMC, USGS, NASA, ESA, METI, NRCAN, GEBCO, NOAA, iPC'
+          url="https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}.png"
         />
 
         <MarkerClusterGroup>
-          {markerScene.map((marker) => (
-            <Marker
-              key={marker.popUp}
-              position={marker.geocode}
-              icon={concertIcon}
-            >
-              <Popup>{marker.popUp}</Popup>
+         
+            <Marker 
+              position={markerCity1.geocode}
+              icon={city1Icon}>
+              <Popup>{markerCity1.popUp}</Popup>
             </Marker>
-          ))}
-          <Marker position={markerCamping.geocode} icon={campingIcon}>
-            <Popup>{markerCamping.popUp}</Popup>
-          </Marker>
-          {markerToilets.map((marker) => (
-            <Marker
-              key={marker.popUp}
-              position={marker.geocode}
-              icon={toiletsIcon}
-            >
-              <Popup>{marker.popUp}</Popup>
+        
+            <Marker 
+              position={markerCity2.geocode} 
+              icon={city2Icon}>
+              <Popup>{markerCity2.popUp}</Popup>
             </Marker>
-          ))}
-          {markerFood.map((marker) => (
-            <Marker
-              key={marker.popUp}
-              position={marker.geocode}
-              icon={foodIcon}
-            >
-              <Popup>{marker.popUp}</Popup>
-            </Marker>
-          ))}
-          {markerEntrance.map((marker) => (
-            <Marker
-              key={marker.popUp}
-              position={marker.geocode}
-              icon={entranceIcon}
-            >
-              <Popup>{marker.popUp}</Popup>
-            </Marker>
-          ))}
         </MarkerClusterGroup>
       </MapContainer>
         </div>
     ),
-    []
+    [city1, city2, center]
   );
 
   return (
-    <div className="h-60 w-72">
+    <div className="h-100 w-[40vh]">
       {map ? <ResetMap map={map} center={center} /> : null}
       {displayMap }
     </div>

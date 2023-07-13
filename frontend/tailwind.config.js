@@ -15,7 +15,12 @@ export default {
       sans: ["Grenze Gotisch", "sans-serif"],
       mono: ["Carrois Gothic"],
     },
-    extend: {},
+    extend: {
+      height: {
+        100: "40vh",
+        150: "84vh",
+      },
+    },
   },
   plugins: [require("daisyui")],
 };
