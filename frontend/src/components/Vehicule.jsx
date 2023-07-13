@@ -23,14 +23,13 @@ function Vehicule({ image, name, prix, temps, id, description }) {
       <p className="text-base lg:text-xl">
         Temps jusqu'à destination : {Math.round(temps)} heures
       </p>
-      <button
-        className="bg-red text-almostWhite hover:bg-blue hover:text-yellow p-5 flex justify-center items-center font-sans drop-shadow-lg rounded-2xl hover:scale-110 m-5 w-4/5 lg:w-3/4 h-1/6 text-4xl md:text-lg lg:text-3xl transform active:scale-75 active:bg-blue active:text-almostwhite transition-transform"
-        type="button"
-      >
-        Querir ce Char
-      </button>
       <Link to={`/personnaliserVehicule/${id}`}>
-        <Button btnName="Querir ce char" />
+        <button
+          className="bg-red text-almostWhite hover:bg-blue hover:text-yellow p-5 flex justify-center items-center font-sans drop-shadow-lg rounded-2xl hover:scale-110 m-5 w-4/5 lg:w-3/4 h-1/6 text-4xl md:text-lg lg:text-3xl transform active:scale-75 active:bg-blue active:text-almostwhite transition-transform"
+          type="button"
+        >
+          Querir ce Char
+        </button>
       </Link>
 
       {showModal ? (
