@@ -31,6 +31,12 @@ export default {
       "waving-caross": "wave 2s linear infinite",
     },
     extend: {},
+    extend: {
+      height: {
+        100: "40vh",
+        150: "84vh",
+      },
+    },
   },
   plugins: [require("daisyui")],
 };

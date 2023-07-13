@@ -1,13 +1,46 @@
 import { Link } from "react-router-dom";
 
 import Button from "../components/Button";
+import Map from "../components/Map";
 
 import cities from "../assets/Tableaux/ArrayCity.json";
+import { useState } from "react";
+
+import * as turf from "@turf/turf";
 
 function Accueil() {
+  const [selectCity1, setSelectCity1] = useState(
+    {
+    "id":1,
+    "name":"Albi", 
+    "url": "../src/assets/Images/blasons/Blason_Albi.png",
+    "x": 2.14,
+    "y": 43.92
+}
+);
+  const [selectCity2, setSelectCity2] = useState(
+    {
+    "id":2,
+    "name":"Arles",
+    "url": "../src/assets/Images/blasons/Blason_Arles.png",
+    "x": 4.62,
+    "y": 43.67
+}
+);
+
+  const calculDistance = () => {
+    const point1 = turf.point([selectCity1.y, selectCity1.x]);
+    const point2 = turf.point([selectCity2.y, selectCity2.x]);
+    const distance = (turf.distance(point1, point2)).toFixed(2);
+    console.log(distance);
+    localStorage.setItem("distance", distance)
+
+  }
+  
+
   return (
     <main className="bg-almostWhite font-mono flex flex-grow justify-center">
-      <div className="mt-4 max-w-4xl flex flex-col w-full">
+      <div className="mt-4 max-w-4xl flex flex-col w-full h-150">
         <h1 className="text-xl mb-6 ml-2 text-blue">Bienvenue Cousin Hub !</h1>
         <div className="flex mx-2 h-32 md:justify-center">
           <div className="text-xs text-blue max-w-md">
@@ -35,11 +68,11 @@ function Accueil() {
             />
           </div>
         </div>
-        <div className="flex items-center flex-col">
+        <div className="flex items-center justify-around flex-col">
           <h2 className="font-sans text-brown text-xl mb-2">
             Querir ta destination
           </h2>
-          <div className="flex items-center flex-col md:flex-row">
+          <div className="flex items-center flex-col md:flex-row ">
             <div className="flex flex-col w-48 justify-center">
               <label htmlFor="departure" className="mt-2 text-brown">
                 Départ
@@ -48,6 +81,7 @@ function Accueil() {
                 name="departure"
                 id="departure"
                 className="w-full p-1 rounded-md bg-blue drop-shadow-lg"
+                onChange={(e) => setSelectCity1(cities.find((el)=> el.id == e.target.value))}
               >
                 <option value="">---</option>
                 {cities.map((city) => (
@@ -63,6 +97,7 @@ function Accueil() {
                 name="arrival"
                 id="arrival"
                 className="mb-8 w-full p-1 rounded-md bg-blue drop-shadow-lg"
+                onChange={(e) => setSelectCity2(cities.find((el)=> el.id == e.target.value))}
               >
                 <option value="">---</option>
                 {cities.map((city) => (
@@ -72,18 +107,21 @@ function Accueil() {
                 ))}
               </select>
             </div>
-            <img
-              className="mb-4 max-w-sm md:ml-4"
-              src="../src/assets/Images/carte.jpg"
-              alt="carte"
-            />
+            <div className="h-100" >
+              <Map city1={selectCity1}  city2={selectCity2} />
+             
+            </div>
           </div>
-          <Link to="/choixvéhicule/">
+          <div
+            onClick={calculDistance}
+          >
+          <Link to="/choixvehicule/">
             <Button
-              className="md:absolute bottom-32"
+            
               btnName="Querir son char"
             />
           </Link>
+          </div>
         </div>
       </div>
     </main>
