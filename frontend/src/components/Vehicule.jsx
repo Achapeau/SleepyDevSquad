@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 import Button from "./Button";
 
@@ -22,7 +23,10 @@ function Vehicule({ image, name, prix, temps, id, description }) {
         type="button"
       >
         Querir ce Char
-      </button>
+      </button> */}
+      <Link to={`/personnaliserVehicule/${id}`}>
+        <Button btnName="Querir ce char" />
+      </Link>
 
       {showModal ? (
         <div>
