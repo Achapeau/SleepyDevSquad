@@ -128,7 +128,7 @@ VALUES (
         1
     ), (
         'Chaise à porteur',
-        '../src/assets/Images/chaise_a_porteur.png',
+        '../src/assets/Images/Chaise-porteuse.png',
         'Peu rapide, mais au moins vous aurez la classe !',
         20,
         3,
