@@ -9,7 +9,7 @@ function NavBar() {
             <img
               src="../src/assets/Images/logo-sds.png"
               alt="Logo for desktop"
-              className="h-20 m-5"
+              className="h-20 m-5 object-contain"
             />
           </Link>
         </li>
