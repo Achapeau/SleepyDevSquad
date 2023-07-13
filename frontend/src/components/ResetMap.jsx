@@ -1,7 +1,7 @@
 import { useEffect, useState, useCallback } from "react";
 import Proptypes from "prop-types";
 
-const zoom = 6;
+const zoom = 5;
 
 function ResetMap({ map, center }) {
   const [position, setPosition] = useState(() => map.getCenter());
@@ -23,12 +23,12 @@ function ResetMap({ map, center }) {
 
   return (
     <p>
-      <span className="flex m-auto justify-center items-center font-sans">
-        latitude: {position.lat.toFixed(4)}, longitude:{" "}
-        {position.lng.toFixed(4)}
-      </span>
-      <button className="flex m-auto mb-4 justify-center items-center h-8 w-24 rounded-2xl bg-yellow" type="button" onClick={onClick}>
-        reset
+      <button
+        className="flex m-auto mb-4 justify-center items-center h-8 w-24 rounded-2xl bg-yellow"
+        type="button"
+        onClick={onClick}
+      >
+        Recentrum
       </button>
     </p>
   );

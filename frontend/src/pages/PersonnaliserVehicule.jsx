@@ -107,8 +107,8 @@ function PersonnaliserVehicule() {
               </h1>
             </div>
             <p className="font-mono text-blue text-sm lg:text-lg lg:py-8 py-6 text-center">
-              Choisis tes options entre moteur, boisson et si tu désires des
-              gardes et transporter des marchandises
+              Choisis tes options entre boissons, gardes, cocher ou
+              marchandises.
             </p>
             <div className="flex justify-evenly">
               <div className="flex flex-col items-center lg:text-2xl">
@@ -198,7 +198,7 @@ function PersonnaliserVehicule() {
             <div className="font-mono text-center bg-almostWhite ">
               <div
                 onClick={() => window.my_modal_2.showModal()}
-                className="flex justify-center  bg-blend-overlay"
+                className="flex justify-center lg:mb-4 bg-blend-overlay"
               >
                 <Button btnName="Finaliser ma commande" />
               </div>
