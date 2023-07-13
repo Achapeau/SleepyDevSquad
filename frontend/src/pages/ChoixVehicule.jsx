@@ -19,6 +19,7 @@ function ChoixVehicule() {
         setVehiclesData(response.data);
       })
       .catch((error) => console.error(error));
+    window.scrollTo(0, 0);
   }, []);
 
   if (vehiclesData.length > 0) {
