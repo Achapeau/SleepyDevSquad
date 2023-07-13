@@ -25,8 +25,7 @@ function ChoixVehicule() {
   if (vehiclesData.length > 0) {
     console.log(vehiclesData);
   }
-
-  const km = 50;
+  const km = parseInt(localStorage.getItem("distance"), 10);
 
   const handleClickMoteur = (e) => {
     setMoteur(e.target.value);
@@ -126,8 +125,8 @@ function ChoixVehicule() {
 
           <select onChange={handleTri}>
             <option value="tri">Trier les véhicules</option>
-            <option value="prixCroissant">Par prix décroissant</option>
-            <option value="prixDécroissant">Par prix croissant</option>
+            <option value="prixCroissant">Par prix croissant</option>
+            <option value="prixDécroissant">Par prix décroissant</option>
             <option value="duréeCroissante">Par durée croissante</option>
             <option value="duréeDécroissante">Par durée décroissante</option>
           </select>
@@ -142,11 +141,19 @@ function ChoixVehicule() {
               )
               .filter((elem) => roues === null || elem.roues === roues)
               .filter((elem) => confort === null || elem.confort === confort)
+              .sort((a, b) => tri === "prixCroissant" && a.prix - b.prix)
+              .sort((a, b) => tri === "prixDécroissant" && b.prix - a.prix)
+              .sort(
+                (a, b) => tri === "duréeCroissante" && b.vitesse - a.vitesse
+              )
+              .sort(
+                (a, b) => tri === "duréeDécroissante" && a.vitesse - b.vitesse
+              )
               .map((vehicle) => (
                 <Vehicule
                   image={vehicle.image}
                   name={vehicle.name}
-                  prix={vehicle.prix * km}
+                  prix={Math.round((vehicle.prix / 10) * km)}
                   temps={km / vehicle.vitesse}
                 />
               ))}
