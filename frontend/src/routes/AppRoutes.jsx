@@ -11,10 +11,11 @@ function AppRoutes() {
       <Route exact path="/" element={<Accueil />} />
       <Route path="/choixvehicule/" element={<ChoixVehicule />} />
       <Route
-        path="/personnaliservehicule/"
+        path="/personnaliservehicule/:id"
         element={<PersonnaliserVehicule />}
       />
       <Route path="*" element={<NotFound />} />
+      <Route path="/not-found" element={<NotFound />} />
     </Routes>
   );
 }

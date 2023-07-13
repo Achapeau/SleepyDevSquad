@@ -78,7 +78,7 @@ function Accueil() {
               alt="carte"
             />
           </div>
-          <Link to="/choixvéhicule/">
+          <Link to="/choixvehicule/">
             <Button
               className="md:absolute bottom-32"
               btnName="Querir son char"
