@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Albi",
+    "url": "../src/assets/Images/blasons/Blason_Albi.png",
+    "x": 2.14,
+    "y": 43.92
+  },
+  {
+    "id": 2,
+    "name": "Arles",
+    "url": "../src/assets/Images/blasons/Blason_Arles.png",
+    "x": 4.62,
+    "y": 43.67
+  },
+  {
+    "id": 3,
+    "name": "Avignon",
+    "url": "../src/assets/Images/blasons/Blason_Avignon.png",
+    "x": 4.8,
+    "y": 43.94
+  },
+  {
+    "id": 4,
+    "name": "Carcassonne",
+    "url": "../src/assets/Images/blasons/Blason_Carcassonne.png",
+    "x": 2.34,
+    "y": 43.21
+  },
+  {
+    "id": 5,
+    "name": "Château de Carmélide",
+    "url": "../src/assets/Images/blasons/Blason_carmelide.png",
+    "x": -2.3,
+    "y": 47.39
+  },
+  {
+    "id": 6,
+    "name": "Château de Montmirail",
+    "url": "../src/assets/Images/blasons/Blason_Dournazac.png",
+    "x": 0.91,
+    "y": 45.62
+  },
+  {
+    "id": 7,
+    "name": "Gordes",
+    "url": "../src/assets/Images/blasons/Blason_Gordes.png",
+    "x": 5.2,
+    "y": 43.91
+  },
+  {
+    "id": 8,
+    "name": "Hesdin",
+    "url": "../src/assets/Images/blasons/Blason_Hesdin.png",
+    "x": 2.03,
+    "y": 50.37
+  },
+  {
+    "id": 9,
+    "name": "Kaamelott",
+    "url": "../src/assets/Images/blasons/Blason-Kaamelott.png",
+    "x": -3.06,
+    "y": 48.45
+  },
+  {
+    "id": 10,
+    "name": "Provins",
+    "url": "../src/assets/Images/blasons/Blason_Provins.png",
+    "x": 3.29,
+    "y": 48.55
+  }
+]
