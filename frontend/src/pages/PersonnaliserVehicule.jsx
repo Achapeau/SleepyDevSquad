@@ -31,7 +31,7 @@ function PersonnaliserVehicule() {
   const km = parseInt(localStorage.getItem("distance"), 10);
   const prix = Math.round((vehiclesData.prix / 10) * km);
 
-  const dateTimer = new Date("July 15, 23 17:20:18");
+  const dateTimer = new Date("July 15, 30 17:20:18");
   const [cocher, setCochet] = useState(false);
   const [gardes, setGardes] = useState(false);
   const [marchandises, setMarchandises] = useState(false);
