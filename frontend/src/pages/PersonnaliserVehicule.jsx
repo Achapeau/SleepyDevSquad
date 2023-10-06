@@ -13,7 +13,7 @@ function PersonnaliserVehicule() {
   const [vehiclesData, setVehiclesData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8000/vehicules")
+    fetch("https://api.tuum-vehiculum.achap.fr/vehicules")
       .then((res) => res.json())
       .then((data) => {
         const itemsData = data.find((item) => item.id === parseInt(id, 10));
@@ -140,7 +140,7 @@ function PersonnaliserVehicule() {
                   onChange={handleCocher}
                 />
                 <img
-                  src={unCocher}
+                  src="/Images/options/Cocher.png"
                   alt="Image d'un cochet"
                   className={
                     cocher ? "w-14 lg:w-20 mt-2 flex justify-center" : "hidden"
@@ -156,7 +156,7 @@ function PersonnaliserVehicule() {
                   onChange={handleGardes}
                 />
                 <img
-                  src={garde}
+                  src="/Images/options/Garde.png"
                   alt="Image d'un garde"
                   className={
                     gardes ? "w-14 lg:w-20 mt-2 flex justify-center" : "hidden"
@@ -172,8 +172,8 @@ function PersonnaliserVehicule() {
                   onChange={handleMarchandises}
                 />
                 <img
-                  src={marchandise}
-                  alt="Image d'un garde"
+                  src="/Images/options/Marchandises.png"
+                  alt="Image de marchandise"
                   className={
                     marchandises
                       ? "w-14 lg:w-20 mt-2 flex justify-center"
@@ -183,7 +183,7 @@ function PersonnaliserVehicule() {
               </div>
             </div>
             <div className="hidden lg:flex lg:justify-center lg:mt-14">
-              <img src={reine} alt="Photo d'une reine avec un portable" />
+              <img src="/Images/reine.png" alt="Photo d'une reine avec un portable" />
             </div>
           </div>
           <div className="lg:w-2/4">

@@ -61,7 +61,7 @@ function Accueil() {
             </svg>
             <img
               className="h-40 relative bottom-32 md:h-44 lg:h-52"
-              src="../src/assets/Images/paysan.png"
+              src="./Images/paysan.png"
               alt="paysan"
             />
           </div>
@@ -123,7 +123,7 @@ function Accueil() {
             </div>
             <div>
               <img
-                src="../src/assets/Images/charette.png"
+                src="./Images/charette.png"
                 alt="charette"
                 className="Charette"
               />
