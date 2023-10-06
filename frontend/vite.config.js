@@ -6,12 +6,10 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        assetFileNames: {
-          "assets/[name]": "assets/[name]",
-          "assets/Images/[name]": "assets/Images/[name]",
-          "assets/Images/blasons/[name]": "assets/Images/blasons/[name]",
-          "assets/Images/options/[name]": "assets/Images/options/[name]",
-        },
+        assetFileNames: "assets/[name]",
+        "assets/Images/[name]": "assets/Images/[name]",
+        "assets/Images/blasons/[name]": "assets/Images/blasons/[name]",
+        "assets/Images/options/[name]": "assets/Images/options/[name]",
       },
     },
   },
