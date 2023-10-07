@@ -5,7 +5,7 @@ import Button from "../components/Button"
 import Countdown from "../components/Countdown/Countdown"
 
 import reine from "/Images/reine.png"
-import unCocher from "Images/options/Cocher.png"
+import unCocher from "/Images/options/Cocher.png"
 import garde from "/Images/options/Garde.png"
 import marchandise from "/Images/options/Marchandises.png"
 
