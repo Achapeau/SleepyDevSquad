@@ -1,210 +1,197 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
+import { useState, useEffect } from "react"
+import axios from "axios"
 
-import Vehicule from "../components/Vehicule";
+import Vehicule from "../components/Vehicule"
 
 function ChoixVehicule() {
-  //Récupérer les informations depuis l'API
-  const [vehiclesData, setVehiclesData] = useState([]);
-  const [moteur, setMoteur] = useState(null);
-  const [decapotable, setDecapotable] = useState(null);
-  const [confort, setConfort] = useState(null);
-  const [roues, setRoues] = useState(null);
-  const [tri, setTri] = useState(null);
+  const [vehiclesData, setVehiclesData] = useState([])
+  const [moteur, setMoteur] = useState(null)
+  const [decapotable, setDecapotable] = useState(null)
+  const [confort, setConfort] = useState(null)
+  const [roues, setRoues] = useState(null)
+  const [tri, setTri] = useState(null)
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/vehicules`)
+      .get(`${import.meta.env.VITE_BACKEND_URL}/vehicules`)
       .then((response) => {
-        setVehiclesData(response.data);
+        setVehiclesData(response.data)
+        console.log(response)
       })
-      .catch((error) => console.error(error));
-    window.scrollTo(0, 0);
-  }, []);
+      .catch((error) => console.error(error))
+    window.scrollTo(0, 0)
+  }, [])
 
   if (vehiclesData.length > 0) {
-    console.log(vehiclesData);
+    console.log(vehiclesData)
   }
-  const km = parseInt(localStorage.getItem("distance"), 10);
+  const km = parseInt(localStorage.getItem("distance"), 10)
 
   const handleClickMoteur = (e) => {
-    setMoteur(e.target.value);
-  };
+    setMoteur(e.target.value)
+  }
 
   const handleDecapotable = (e) => {
-    setDecapotable(parseInt(e.target.value, 10));
-  };
+    setDecapotable(parseInt(e.target.value, 10))
+  }
 
   const handleRoues = (e) => {
-    setRoues(parseInt(e.target.value, 10));
-  };
+    setRoues(parseInt(e.target.value, 10))
+  }
 
   const handleConfort = (e) => {
-    setConfort(e.target.value);
-  };
+    setConfort(e.target.value)
+  }
 
   const handleTri = (e) => {
-    setTri(e.target.value);
-  };
+    setTri(e.target.value)
+  }
 
   const resetFilters = () => {
-    setMoteur(null);
-    setDecapotable(null);
-    setRoues(null);
-    setConfort(null);
-  };
+    setMoteur(null)
+    setDecapotable(null)
+    setRoues(null)
+    setConfort(null)
+  }
 
   return (
-    <main className="bg-almostWhite w-screen h-full min-h-screen">
-      <div className="">
+    <main className='bg-almostWhite w-screen h-full min-h-screen'>
+      <div className=''>
         <img
-          className="w-full h-32 object-cover object-center"
-          src="../src/assets/Images/fresque.jpg"
-          alt="foule derrière un carrosse avec chevaux"
+          className='w-full h-32 object-cover object-center'
+          src='/Images/fresque.jpg'
+          alt='foule derrière un carrosse avec chevaux'
         />
-        <div className="flex flex-col m-5 md:flex-row">
-          <details className="dropdown">
-            <summary className="m-1 btn bg-blue text-almostWhite text-xl hover:bg-brown">
+        <div className='flex flex-col m-5 md:flex-row'>
+          <details className='dropdown'>
+            <summary className='m-1 btn bg-blue text-almostWhite text-xl hover:bg-brown'>
               Filtres et tri
             </summary>
-            <div className="p-2 shadow menu dropdown-content z-[1] bg-blue rounded-box w-52 h-96 overflow-scroll">
-              <div className="w-1/6 text-almostWhite  m-5">
+            <div className='p-2 shadow menu dropdown-content z-[1] bg-blue rounded-box w-52 h-96 overflow-scroll'>
+              <div className='w-1/6 text-almostWhite  m-5'>
                 <div>
-                  <p className="font-sans text-2xl my-5">Moteur</p>
+                  <p className='font-sans text-2xl my-5'>Moteur</p>
                   <button
-                    value="Cheval"
+                    value='Cheval'
                     className={`w-28 rounded-lg font-mono text-lg p-2 m-2  border border-blue hover:bg-brown hover:scale-105 hover:text-almostWhite active:scale-75 
               ${moteur === "Cheval" ? "bg-brown " : "bg-almostWhite text-blue"}
               `}
-                    onClick={handleClickMoteur}
-                  >
+                    onClick={handleClickMoteur}>
                     Cheval
                   </button>
                   <button
-                    value="Boeuf"
+                    value='Boeuf'
                     className={`w-28 rounded-lg font-mono text-lg p-2 m-2  border border-blue hover:bg-brown hover:scale-105 hover:text-almostWhite active:scale-75 
               ${moteur === "Boeuf" ? "bg-brown " : "bg-almostWhite text-blue"}
               `}
-                    onClick={handleClickMoteur}
-                  >
+                    onClick={handleClickMoteur}>
                     Boeuf
                   </button>
                   <button
-                    value="Âne"
+                    value='Âne'
                     className={`w-28 rounded-lg font-mono text-lg p-2 m-2  border border-blue hover:bg-brown hover:scale-105 hover:text-almostWhite active:scale-75 
               ${moteur === "Äne" ? "bg-brown " : "bg-almostWhite text-blue"}
               `}
-                    onClick={handleClickMoteur}
-                  >
+                    onClick={handleClickMoteur}>
                     Âne
                   </button>
                   <button
-                    value="Humain"
+                    value='Humain'
                     className={`w-28 rounded-lg font-mono text-lg p-2 m-2  border border-blue hover:bg-brown hover:scale-105 hover:text-almostWhite active:scale-75 
               ${moteur === "Humain" ? "bg-brown " : "bg-almostWhite text-blue"}
               `}
-                    onClick={handleClickMoteur}
-                  >
+                    onClick={handleClickMoteur}>
                     Humain
                   </button>
                 </div>
                 <div>
-                  <p className="font-sans text-2xl my-5">Decapotable</p>
+                  <p className='font-sans text-2xl my-5'>Decapotable</p>
                   <button
-                    value="1"
+                    value='1'
                     className={`w-28 rounded-lg font-mono text-lg p-2 m-2  border border-blue hover:bg-brown hover:scale-105 hover:text-almostWhite active:scale-75 
               ${decapotable === 1 ? "bg-brown " : "bg-almostWhite text-blue"}
               `}
-                    onClick={handleDecapotable}
-                  >
+                    onClick={handleDecapotable}>
                     oui
                   </button>
                   <button
-                    value="0"
+                    value='0'
                     className={`w-28 rounded-lg font-mono text-lg p-2 m-2  border border-blue hover:bg-brown hover:scale-105 hover:text-almostWhite active:scale-75 
               ${decapotable === 0 ? "bg-brown " : "bg-almostWhite text-blue"}
               `}
-                    onClick={handleDecapotable}
-                  >
+                    onClick={handleDecapotable}>
                     non
                   </button>
                 </div>
                 <div>
-                  <p className="font-sans text-2xl my-5">Roues</p>
+                  <p className='font-sans text-2xl my-5'>Roues</p>
                   <button
-                    value="2"
+                    value='2'
                     className={`w-28 rounded-lg font-mono text-lg p-2 m-2  border border-blue hover:bg-brown hover:scale-105 hover:text-almostWhite active:scale-75 
               ${roues === 2 ? "bg-brown " : "bg-almostWhite text-blue"}
               `}
-                    onClick={handleRoues}
-                  >
+                    onClick={handleRoues}>
                     2 roues
                   </button>
                   <button
-                    value="4"
+                    value='4'
                     className={`w-28 rounded-lg font-mono text-lg p-2 m-2  border border-blue hover:bg-brown hover:scale-105 hover:text-almostWhite active:scale-75 
               ${roues === 4 ? "bg-brown " : "bg-almostWhite text-blue"}
               `}
-                    onClick={handleRoues}
-                  >
+                    onClick={handleRoues}>
                     4 roues
                   </button>
                 </div>
                 <div>
-                  <p className="font-sans text-2xl my-5">Confort</p>
+                  <p className='font-sans text-2xl my-5'>Confort</p>
                   <button
-                    value="Royal"
+                    value='Royal'
                     className={`w-28 rounded-lg font-mono text-lg p-2 m-2  border border-blue hover:bg-brown hover:scale-105 hover:text-almostWhite active:scale-75 
               ${confort === "Royal" ? "bg-brown " : "bg-almostWhite text-blue"}
               `}
-                    onClick={handleConfort}
-                  >
+                    onClick={handleConfort}>
                     Royal
                   </button>
                   <button
-                    value="Noble"
+                    value='Noble'
                     className={`w-28 rounded-lg font-mono text-lg p-2 m-2  border border-blue hover:bg-brown hover:scale-105 hover:text-almostWhite active:scale-75 
               ${confort === "Noble" ? "bg-brown " : "bg-almostWhite text-blue"}
               `}
-                    onClick={handleConfort}
-                  >
+                    onClick={handleConfort}>
                     Noble
                   </button>
                   <button
-                    value="Serf"
+                    value='Serf'
                     className={`w-28 rounded-lg font-mono text-lg p-2 m-2  border border-blue hover:bg-brown hover:scale-105 hover:text-almostWhite active:scale-75 
               ${confort === "Serf" ? "bg-brown " : "bg-almostWhite text-blue"}
               `}
-                    onClick={handleConfort}
-                  >
+                    onClick={handleConfort}>
                     Serf
                   </button>
                 </div>
                 <div>
                   <button
                     onClick={resetFilters}
-                    className="w-28 m-2 rounded-lg p-2 border font-mono text-lg border-blue bg-almostWhite text-blue hover:bg-brown active:scale-75 hover:text-almostWhite hover:scale-105"
-                  >
+                    className='w-28 m-2 rounded-lg p-2 border font-mono text-lg border-blue bg-almostWhite text-blue hover:bg-brown active:scale-75 hover:text-almostWhite hover:scale-105'>
                     Réinitialiser filtres
                   </button>
                 </div>
 
                 <select
                   onChange={handleTri}
-                  className="bg-almostWhite text-blue pl-2 p-1 font-mono"
-                >
-                  <option value="tri">Trier les véhicules</option>
-                  <option value="prixCroissant">Par prix croissant</option>
-                  <option value="prixDécroissant">Par prix décroissant</option>
-                  <option value="duréeCroissante">Par durée croissante</option>
-                  <option value="duréeDécroissante">
+                  className='bg-almostWhite text-blue pl-2 p-1 font-mono'>
+                  <option value='tri'>Trier les véhicules</option>
+                  <option value='prixCroissant'>Par prix croissant</option>
+                  <option value='prixDécroissant'>Par prix décroissant</option>
+                  <option value='duréeCroissante'>Par durée croissante</option>
+                  <option value='duréeDécroissante'>
                     Par durée décroissante
                   </option>
                 </select>
               </div>
             </div>
           </details>
-          <div className="flex flex-col md:flex-row md:w-5/6 md:p-8 overflow-hidden flex-wrap justify-center items-center">
+          <div className='flex flex-col md:flex-row md:w-5/6 md:p-8 overflow-hidden flex-wrap justify-center items-center'>
             {vehiclesData.length > 0 &&
               vehiclesData
                 .filter((elem) => moteur === null || elem.moteur === moteur)
@@ -237,7 +224,7 @@ function ChoixVehicule() {
         </div>
       </div>
     </main>
-  );
+  )
 }
 
-export default ChoixVehicule;
+export default ChoixVehicule
