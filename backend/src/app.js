@@ -17,7 +17,7 @@ const cors = require("cors");
 
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL ?? "http://localhost:3000",
+    origin: process.env.FRONTEND_URL ?? ("https://tuum-vehiculum.achap.fr/choixvehicule/" || "https://tuum-vehiculum.achap.fr/personnaliservehicule/"),
     optionsSuccessStatus: 200,
   })
 );
