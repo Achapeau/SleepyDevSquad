@@ -14,7 +14,7 @@ function ChoixVehicule() {
 
   useEffect(() => {
     axios
-      .get(`https://api.tuum-vehiculum.achap.fr/vehicules`)
+      .get(`${import.meta.env.VITE_BACKEND_URL}/vehicules`)
       .then((response) => {
         setVehiclesData(response.data)
         console.log(response)
@@ -60,7 +60,7 @@ function ChoixVehicule() {
       <div className=''>
         <img
           className='w-full h-32 object-cover object-center'
-          src='./Images/fresque.jpg'
+          src='/Images/fresque.jpg'
           alt='foule derrière un carrosse avec chevaux'
         />
         <div className='flex flex-col m-5 md:flex-row'>

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import Button from "../components/Button"
 import Map from "../components/Map"
 
-import cities from "../assets/Tableaux/ArrayCity.json"
+import cities from "../Tableaux/ArrayCity.json"
 import { useState } from "react"
 
 import * as turf from "@turf/turf"
@@ -14,14 +14,14 @@ function Accueil() {
   const [selectCity1, setSelectCity1] = useState({
     id: 1,
     name: "Albi",
-    url: "../src/assets/Images/blasons/Blason_Albi.png",
+    url: "/Images/blasons/Blason_Albi.png",
     x: 0.14,
     y: 0.92,
   })
   const [selectCity2, setSelectCity2] = useState({
     id: 2,
     name: "Arles",
-    url: "../src/assets/Images/blasons/Blason_Arles.png",
+    url: "/Images/blasons/Blason_Arles.png",
     x: 0.62,
     y: 0.67,
   })
@@ -60,7 +60,7 @@ function Accueil() {
             </svg>
             <img
               className='h-40 relative bottom-32 md:h-44 lg:h-52'
-              src='./Images/paysan.png'
+              src='/Images/paysan.png'
               alt='paysan'
             />
           </div>
@@ -120,7 +120,7 @@ function Accueil() {
             </div>
             <div>
               <img
-                src='./Images/charette.png'
+                src='/Images/charette.png'
                 alt='charette'
                 className='Charette'
               />

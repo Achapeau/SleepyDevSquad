@@ -13,7 +13,7 @@ function PersonnaliserVehicule() {
   const [vehiclesData, setVehiclesData] = useState([])
 
   useEffect(() => {
-    fetch("https://tuum-vehiculum-back.achap.fr/vehicules")
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/vehicules`)
       .then((res) => res.json())
       .then((data) => {
         const itemsData = data.find((item) => item.id === parseInt(id, 10))

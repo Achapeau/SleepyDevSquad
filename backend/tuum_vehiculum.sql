@@ -38,7 +38,7 @@ INSERT INTO
     )
 VALUES (
         'Âne',
-        '../src/assets/Images/ane.png',
+        '/Images/ane.png',
         'Un magnifique âne qui vous amènera à bon port, lentement mais sûrement.',
         1,
         8,
@@ -53,7 +53,7 @@ VALUES (
         0
     ), (
         'Calèche 2 chevaux',
-        '../src/assets/Images/caleche.png',
+        '/Images/caleche.png',
         'Rapide, la calèche 2 chevaux vous amène où vous le souhaitez dans les délais les plus rapides',
         20,
         25,
@@ -68,7 +68,7 @@ VALUES (
         1
     ), (
         'Calèche décapotable',
-        '../src/assets/Images/caleche_décapotable.png',
+        '/Images/caleche_décapotable.png',
         'Idéale pour prendre le soleil, cette calèche vous amène où vous souhaitez rapidement et avec style',
         17,
         15,
@@ -83,7 +83,7 @@ VALUES (
         1
     ), (
         'Calèche',
-        '../src/assets/Images/caleche.png',
+        '/Images/caleche.png',
         'Le transport idéal pour faire bonne impression à la cour sans être en concurrence avec la monarchie',
         15,
         15,
@@ -98,7 +98,7 @@ VALUES (
         1
     ), (
         'Carrosse familial',
-        '../src/assets/Images/carrosse_familiale.png',
+        '/Images/carrosse_familiale.png',
         'Ce sublime carrosse vous amènera vous et votre famille où vous le souhaitez, tout en bénéficiant d''un confort extrême',
         30,
         15,
@@ -113,7 +113,7 @@ VALUES (
         1
     ), (
         'Carrosse',
-        '../src/assets/Images/carrosse.png',
+        '/Images/carrosse.png',
         'La princesse que vous êtes mérite ce transport rapelant à la populasse vos royales origines',
         25,
         15,
@@ -128,7 +128,7 @@ VALUES (
         1
     ), (
         'Chaise à porteur',
-        '../src/assets/Images/Chaise-porteuse.png',
+        '/Images/Chaise-porteuse.png',
         'Peu rapide, mais au moins vous aurez la classe !',
         20,
         3,
@@ -143,7 +143,7 @@ VALUES (
         1
     ), (
         'Char',
-        '../src/assets/Images/char.png',
+        '/Images/char.png',
         'L''époque des arènes vous manques? Vous prenez pour Ben-Hur? Utilisez nos chars (attention, les risques d''accidents ne sont pas prix en charge pour notre compagnie)',
         12,
         35,
@@ -158,7 +158,7 @@ VALUES (
         0
     ), (
         'Charette 2 boeufs',
-        '../src/assets/Images/charette_2_boeufs.png',
+        '/Images/charette_2_boeufs.png',
         'Cette charette est idéale pour transporter de la marchandise sans être pressé',
         8,
         5,
@@ -173,7 +173,7 @@ VALUES (
         0
     ), (
         'Charette 2 chevaux',
-        '../src/assets/Images/charette_2_chevaux.png',
+        '/Images/charette_2_chevaux.png',
         'Cette charette avec chevaux vous permettra de frimer à côté de ceux qui utilisent encore des boeufs',
         9,
         5,
@@ -188,7 +188,7 @@ VALUES (
         0
     ), (
         'Charette 2 roues',
-        '../src/assets/Images/charette.png',
+        '/Images/charette.png',
         'Une simple charette, idéale pour transporter vos marchandises',
         5,
         12,
@@ -203,7 +203,7 @@ VALUES (
         0
     ), (
         'Chariot 2 roues',
-        '../src/assets/Images/chariot_aere.png',
+        '/Images/chariot_aere.png',
         'Ce petit chariot est parfait pour faire des courtes distances',
         8,
         12,
@@ -218,7 +218,7 @@ VALUES (
         1
     ), (
         'Chariot 4 roues',
-        '../src/assets/Images/chariot_4roues.png',
+        '/Images/chariot_4roues.png',
         'Vous rêvez de faire un déménagement façon "Petite maison dans la prairie"? Vous avez trouvé le véhicule idéal',
         7,
         5,
@@ -233,7 +233,7 @@ VALUES (
         1
     ), (
         'Chariot décapotable',
-        '../src/assets/Images/chariot_decapotable.png',
+        '/Images/chariot_decapotable.png',
         'Superbe chariot décapotable, permettant de faire des courtes distances en profitant du soleil.',
         12,
         12,
@@ -248,7 +248,7 @@ VALUES (
         1
     ), (
         'Cheval',
-        '../src/assets/Images/cheval.png',
+        '/Images/cheval.png',
         'Simple et efficace, le cheval est la solution à tout vos déplacement',
         3,
         30,
