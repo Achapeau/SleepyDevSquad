@@ -4,7 +4,6 @@ import axios from "axios"
 import Vehicule from "../components/Vehicule"
 
 function ChoixVehicule() {
-  //Récupérer les informations depuis l'API
   const [vehiclesData, setVehiclesData] = useState([])
   const [moteur, setMoteur] = useState(null)
   const [decapotable, setDecapotable] = useState(null)

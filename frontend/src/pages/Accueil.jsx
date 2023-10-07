@@ -8,8 +8,6 @@ import { useState } from "react"
 
 import * as turf from "@turf/turf"
 
-// import "../styles/Accueil.css";
-
 function Accueil() {
   const [selectCity1, setSelectCity1] = useState({
     id: 1,

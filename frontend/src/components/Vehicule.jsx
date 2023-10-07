@@ -1,8 +1,6 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
 
-import Button from "./Button"
-
 function Vehicule({ image, name, prix, temps, id, description }) {
   const [showModal, setShowModal] = useState(false)
 

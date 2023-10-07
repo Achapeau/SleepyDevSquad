@@ -6,13 +6,11 @@ import "./index.css"
 
 function App() {
   return (
-    <>
-      <div>
-        <NavBar />
-        <AppRoutes />
-        <Footer />
-      </div>
-    </>
+    <div>
+      <NavBar />
+      <AppRoutes />
+      <Footer />
+    </div>
   )
 }
 
